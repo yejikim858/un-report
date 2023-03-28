@@ -1,0 +1,8 @@
+download.file("https://raw.githubusercontent.com/biocorecrg/CRG_RIntroduction/master/de_df_for_volcano.rds", "de_df_for_volcano.rds", method="curl")
+
+tmp <- readRDS("de_df_for_volcano.rds")
+
+de <- tmp[complete.cases(tmp), ]
+ggplot(data=de, aes(x=log2FoldChange, y=pvalue)) + geom_point()
+p <- ggplot(data=de, aes(x=log2FoldChange, y=-log10(pvalue))) + geom_point()
+p <- ggplot(data=de, aes(x=log2FoldChange, y=-log10(pvalue))) + geom_point() + theme_minimal()
