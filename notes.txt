@@ -4,3 +4,6 @@ Each point represents a country
 Continents are grouped by color..
 How about some animations?
 No
+
+
+Kira says "Hi!" :D
